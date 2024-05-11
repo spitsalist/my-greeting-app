@@ -16,8 +16,9 @@ function App() {
     <div>
       <Greeting name='Wasea'/>
       <ShoppingList items={items}/>
-      { <h1>Order Status</h1> }
-        <OrderStatus orderId={orders[0].orderId} status={orders[1].status} />
+       <h1>Order Status</h1> 
+       { orders.map((order) => <OrderStatus orderId={order.orderId} status={order.status} />) }
+
     </div>
 
   );
